@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<title>Login</title>
+		 <link rel="stylesheet" type="text/css" href="index.css">
+		<style>
+            .lable {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.input {
+    border-radius: 4px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+	outline: none;
+	margin: 10px 0 20px 0;
+}
+
+.check{
+	width: 100%;
+	height: 40px;
+}
+
+.checkbox{
+	zoom:1.7;
+	text-align: center;
+	float: left;
+}
+
+.submit{
+	margin-top: 20px;
+	display: flex;
+}
+
+.dn-submit{
+	width: 45%;
+	background-color: red;
+	box-shadow: 0 4px 6px #00000029;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    padding: 12px;
+}
+
+.btn{
+	margin-left: 50px;
+	font-weight: bold;
+    border-radius: 4px;
+	flex-grow: 1;
+	padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid #00483d;
+    color: #222;
+	text-decoration: none;
+}
+        </style>
+	</head>
+	 <body style="margin: 0px;font-family:Arial;">
+        <div id="nav">
+            <div id="menu">
+                <div class="logo">
+                    <a href="index.html" style="float: left;"><img src="a1.png" ></a>
+                    <select class="list-tp">
+                        <option selected>Hà Nội</option>
+                        <option selected>Hưng Yên</option>
+                        <option selected>Hải Dương</option>
+                        <option selected>Hải Phòng</option>
+                        <option selected>TP.HCM</option>
+                        <option selected>Huế</option>
+                        <option selected>Đà Nẵng</option>
+                        <option selected>Đà Lạt</option>
+                    </select>
+                </div>
+                <div class="lt-menu">
+                    <ul>
+                        <li><a href="Food.html">Đồ ăn</a></li>                     
+                        <li><a href="ThucPham.html">Thực phẩm</a></li>
+                        <li><a href="Bia.html">Đồ uống</a></li>
+                        <li><a href="HoaQua.html">Hoa quả</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="tk-dn">
+                    <div id="gio">
+                        <a href="Cart.html" id="card-shop">
+                            <img src="https://img.icons8.com/carbon-copy/40/000000/shopping-cart.png"/>
+                            <span id="item" data-count="0">1</span>
+                        </a>
+                    </div>
+                    <div class="dn">
+                        <a href="Login.html">Đăng Nhập</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+			<div style=" width:630px; height: 500px; background-color: #f1f1f3; margin: auto; margin-top: 100px; padding:20px; border:1px solid #ccc">
+                <h2 style="text-align: center ">Sign up</h2>
+                
+                <input type="button" value="Đăng nhập với FaceBook" style=" height:30px; width:585px;text-align: center ;color: white;background-color:blue; border:1px"><br/>
+                <input type="button" value="Đăng nhập với GooGle" style=" height:30px; width:585px;text-align: center ; margin-top:5px; color: white;background-color:green; border:1px"><br/>
+                <h5 style ="text-align: center"><i>Hoặc đăng nhập bằng tài khoản khách hàng</i></h5>
+                <form action="admin.html" method="POST" autocomplete="on" onsubmit="return show({'tk':'admin','mk':'admin'})">
+					<div class="lable">Tài Khoản</div>
+					<input class="input" type="text" name="username" id="username" placeholder="Nhập tài khoản *">
+					<div class="lable">Mật khẩu</div>
+					<input class="input" type="text" name="password" id="password" placeholder="Nhập mật khẩu *">
+					<div class="check">
+						<input type="checkbox"style="zoom:1.2;text-align: center " > Lưu thông tin đăng nhập
+					</div>
+					<div class="submit">
+						<button class="dn-submit" id="submit_login">ĐĂNG NHẬP</button>
+						<a class="btn" href="DangKy.html">ĐĂNG Ký</a>
+					</div>
+				</form>
+			<!-- <input type="text" placeholder="Sđt hoặc email" style="line-height:30px; width:585px;text-align: center ">
+			<br/>
+			<br/>
+			<input type="Password" placeholder="Mật khẩu" style="line-height:30px; width:585px;text-align: center;  ">
+			<br/>
+			<br/>
+			<input type="checkbox"style="zoom:1.2;text-align: center " > Lưu thông tin đăng nhập
+			<br/><br/>
+			<input type="button" value="ĐĂNG NHẬP" style=" height:30px; width:585px;text-align: center ;;color: white; background-color:red; border:1px">
+			<br/><br/>
+			<a href=" forgotpassword.html" style=" text-align: center">Bạn quên mật khẩu?</a>
+            <a href="DangKy.html" style=" float: right;">Đăng ký</a> -->
+			</div>
+		</div>
+        <script>
+            function show(item){
+                var login=[item];
+                var inputusername= document.getElementById('username').value;
+                var inputpassword= document.getElementById('password').value;
+                var ok=true;
+                for(let x of login){
+                    if(x.tk!=inputusername || x.mk!=inputpassword){
+                        ok=false;
+                    }
+                }
+                console.log('tk:'+inputusername+'mk'+inputpassword);
+                if(ok){
+                    return true;
+                }
+                else{
+                    alert("Tài khoản hoặc mật khẩu không chính sác!");
+                    return false;
+                }
+            }
+        </script>   
+	</body>
+</html>

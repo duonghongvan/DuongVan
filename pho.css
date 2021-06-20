@@ -1,0 +1,449 @@
+*{
+	box-sizing: border-box;
+}
+
+[class*="col-"]{
+	float: left;
+	padding: 15px;
+	border: 1px solid red;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+
+@media only screen and (max-width: 768px){	
+	.col-s-1{width: 8.33%;}
+	.col-s-2{width: 16.66%;}
+	.col-s-3{width: 25%;}
+	.col-s-4{width: 33.33%;}
+	.col-s-5{width: 41.66%;}
+	.col-s-6{width: 50%;}
+	.col-s-7{width: 58.33%;}
+	.col-s-8{width: 66.66%;}
+	.col-s-9{width: 75%;}
+	.col-s-10{width: 83.33%;}
+	.col-s-11{width: 91.66%;}
+	.col-s-12{width: 100%;}
+	
+	#nav{display:none;}
+}
+/* for mobile*/
+@media only screen and (min-width: 768px){	
+	.col-m-1{width: 8.33%;}
+	.col-m-2{width: 16.66%;}
+	.col-m-3{width: 25%;}
+	.col-m-4{width: 33.33%;}
+	.col-m-5{width: 41.66%;}
+	.col-m-6{width: 50%;}
+	.col-m-7{width: 58.33%;}
+	.col-m-8{width: 66.66%;}
+	.col-m-9{width: 75%;}
+	.col-m-10{width: 83.33%;}
+	.col-m-11{width: 91.66%;}
+	.col-m-12{width: 100%;}
+	
+	#nav{display:none;}
+}
+
+/* for large devices*/
+@media only screen and (min-width:992px){
+	.col-1 {width: 10.33%;}
+	.col-2 {width: 16.3%;}
+	.col-3 {width: 24%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 40%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 55.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 78.85%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 99.66%;}
+	.col-12 {width: 100%;}
+                        
+	#nav{
+		display:block;
+	}
+}
+
+#nav{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+}
+
+#menu{
+    width: 1200px;
+    height: 80px;
+    margin: auto;
+}
+
+.logo{
+    width: 200px;
+    height: 80px;
+    float: left;
+}
+
+.logo img{
+    width: 85px;
+    height: 50px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.list-tp{
+    width: 110px;
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 10px;
+    float: right;
+}
+
+.lt-menu{
+    width: 800px;
+    height: 80px;
+    float: left;
+}
+
+.lt-menu ul{
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+}
+
+.lt-menu ul li{
+    float: left;
+    padding: 30px;
+    position: relative;
+}
+
+.lt-menu ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.lt-menu ul li a:hover{
+    color: red;
+}
+
+.tk-dn{
+    width: 200px;
+    height: 80px;
+    float: left;
+}
+
+#gio{
+	width: 60px;
+	float:left;
+	margin-top:20px;
+	margin-left:30px;
+	background-color:white;
+	border-radius:8px;
+	text-align: center;
+    border: 1px solid #00CCFF;
+}
+
+.img-fly{
+	position: absolute;
+	z-index: 9999999;
+	width: 50px;
+	height: 50px;
+	background-color: orange;
+	border-radius: 100%;
+	object-fit: cover;
+	border: 2px solid red;
+	transition-duration: 1s;
+	animation: MyAnimation 1.5s;
+}
+
+#item{
+	font-size: 10px;
+	float: right;
+	padding-top: 5px;
+	padding-right: 8px;
+}
+
+.tk{
+    float: left;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.tk a{
+    display: block;
+    font-size: 17px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #00CCFF;
+}
+
+.tk:hover{
+    background-color: #00CCFF;
+    color: white;
+}
+
+.tk a:hover{
+    color: white;
+}
+.dn{
+    width: 100px;
+    height: 40px;
+    float: right;
+    margin-top: 18px;
+    border: 1px solid #00CCFF;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.dn a{
+    display: block;
+    font-size: 17px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #00CCFF;
+}
+
+.dn:hover{
+    background-color: #00CCFF;
+    color: white;
+}
+
+.dn a:hover{
+    color: white;
+}
+
+#main{
+    width: 100%;
+    height: 700px;
+    
+    background-repeat:no-repeat;
+	background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.than{
+    margin-left: 160px;
+    margin-top: 20px;
+    border: none;
+}
+
+.phan-dau{
+    width: 100%;
+    min-height: 350px;
+}
+
+.mon-chinh{
+    width: 40%;
+}
+
+.chi-tiet{
+    float: right;
+    border: none;
+}
+
+.chi-tiet p{
+    margin: 0px 0px 5px 0px;
+}
+
+.item-price{
+    font-size: 20px;
+    color: red;
+}
+
+.dia-chi strong{
+    font-size: 12;
+    color: rgb(184, 173, 173);
+}
+
+.dia-chi span{
+    font-size: 12;
+}
+
+.dg i{
+    font-size: 14;
+}
+
+.dg span{
+    font-size: 14;
+}
+
+.TT{
+    width: 440px;
+    height: 40px;
+}
+
+.mua{
+    width: 370px;
+    height: 40px;
+    background-color: red;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.them_hang{
+    width: 60px;
+    height: 40px;
+    background-color: orange; 
+    float: left;
+    border-radius: 5px;
+}
+
+.them_hang img{
+    padding-left: 12px;
+    padding-top: 2px;
+}
+
+.phi{
+    width: 100%;
+    margin-top: 90px;
+    border: none;
+}
+
+.phi ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.phi ul li{
+    float: left;
+    padding-right: 30px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border-right: 1px solid gray;
+}
+
+.phi ul li strong{
+    font-size: 14px;
+    color: rgb(184, 173, 173);
+}
+
+.phi ul li b{
+    font-size: 13px;
+    color: rgba(163, 6, 6, 0.836);
+}
+
+.san-pham{
+    width: 100%;
+    background-color: rgb(196, 196, 196);
+    border: none;
+}
+
+.phan-duoi1{
+    margin-left: 130px;
+    border: none;
+}
+
+.phan-duoi1 h4{
+    margin: 0px;
+    padding-left: 30px;
+}
+
+.phan-duoi1 ul{
+    margin: 0px;
+    padding: 0px;
+    height: 90px;
+    margin-top: 20px;
+    background-color: white;
+    list-style: none;
+    border-radius: 5px;
+}
+
+.phan-duoi1 ul li{
+    font-size: 13;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.phan-duoi2{
+    margin-top: 55px;
+    background-color: white;
+    border: none;
+}
+
+.san-pham a{
+    text-decoration: none;
+    color: black;
+}
+
+.them-mon{
+    width: 100%;
+    height: 63px;
+    margin-top: 10px;
+}
+
+.sp{
+    width: 17%;
+    float: left;
+}
+
+.ten{
+    width: 72%;
+    height: 63px;
+    margin-left: 120px;
+}
+
+.ten span{
+    float: right;
+    padding-top: 25px;
+    font-weight: 700;
+    color: red;
+}
+
+.vouched{
+    margin-top: 55px;
+    margin-left: 10px;
+    background-color: white;
+    border: none;
+}
+
+.vouched1{
+    width: 100%;
+    height: 47px;
+    margin-top: 10px;
+    font-size: 13;
+    margin-top: 10px;
+}
+
+.vouched1 .vc{
+    width: 70px;
+    margin-right: 5px;
+    float: left;
+}
+ 
+.footer{
+    width: 100%;
+    min-height: 200px;
+    background-color: rgb(196, 196, 196);
+    border: none;
+}
+
+.ft{
+    width: 78.85%;
+	margin:auto;
+	border-radius: 10px;
+    background-color: burlywood;
+}
+
+.footer1{
+	max-width:270px;
+	height:320px;
+	margin-left:50px;
+	float: left;
+}
+
+.footer1 ul{
+	list-style: none;
+	margin:0px;
+}
+
+.TT{
+	margin-top:20px;
+}

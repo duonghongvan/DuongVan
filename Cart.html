@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<title>Thanh toán</title>
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://kit.fontawesome.com/3875455e82.js" crossorigin="anonymous"></script> -->
+		<link rel="stylesheet" type="text/css" href="thanhtoan.css">
+		<script src="jquery-3.6.0.min.js"></script>
+		<script src="dathang.js"></script>
+	</head>
+	<body style="background-color:#EEEEEE">
+		<div id='giohang'>
+			<div class="cart">
+				<div class="phan-dau">
+					<a href="Food.html">
+						<img style="float: left;" src="https://img.icons8.com/pastel-glyph/60/000000/back.png"/>					
+						<strong>Quay lại</strong>
+					</a>
+				</div>
+				<div class="phan-than">
+					<div class="cart-info col-7">
+						<div class="cart-icon">
+								<div class="icon-cart">
+									<img src="https://img.icons8.com/material-outlined/64/008000/checked--v1.png"/><br/>
+									<strong>Giỏ hàng</strong>
+								</div>
+								<div class="san_p"></div>
+								<div class="tong-tien">
+									<p>
+										Tổng giá trị: 
+										<strong class="price tien">0 </strong><span>₫</span>
+									</p>
+									<p>
+										
+										Giảm giá:
+										<strong class="itemprice">-00 </strong><span>₫</span>
+									</p>
+									<p>
+										Tổng thanh toán: 
+										<strong class="price text-red tien">0 </strong><span>₫</span>
+									</p>
+								</div>
+						</div>
+					</div>
+					<div class="cart-form col-5">
+						<form action="" method="POST" autocomplete="on">
+							<h3>Thông tin đặt hàng</h3>
+							<p class="text" style="color: #AAA;">
+								<i>Bạn cần điền đầy đủ các trường thông tin có dấu *</i>
+							</p>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="ho-ten" id="ho-ten" placeholder="Họ và tên *" data-required="1">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="sdt" id="sdt" placeholder="Số điện thoại *" data-required="1">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="dia-chi" id="dia-chi" placeholder="Địa chỉ nhận hàng *" data-required="1">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="email" id="email" placeholder="Email">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<textarea name="ghi-chu" placeholder="Ghi chú" id="ghi-chu" spellcheck="false" data-minlength="15" style="height: 70px; overflow-y: hidden;"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="ma-giam-gia" id="ma-giam-gia" placeholder="Mã giảm giá (nếu có)">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="control-botton">
+									<button onclick="dathangtc()">XÁC NHẬN VÀ ĐẶT HÀNG</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

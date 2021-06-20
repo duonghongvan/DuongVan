@@ -1,0 +1,195 @@
+<html>
+    <head>
+        <title>Đặt đồ ăn trực tuyến</title>
+        <link rel="stylesheet" type="text/css" href="raucu.css">
+		<!-- <link href="https://s3.prod.now.vn/resources/shopee_font/font.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/3875455e82.js" crossorigin="anonymous"></script> -->
+		<script src="jquery-3.6.0.min.js"></script>
+		<script src="dathang.js"></script>
+  </head>
+<body style="margin: 0px;font-family:Arial;">
+        <div id="nav">
+            <div id="menu">
+                <div class="logo">
+                    <a href="Food.html" style="float: left;"><img src="a1.png" ></a>
+                    <select class="list-tp">
+                        <option selected>Hà Nội</option>
+                        <option selected>Hưng Yên</option>
+                        <option selected>Hải Dương</option>
+                        <option selected>Hải Phòng</option>
+                        <option selected>TP.HCM</option>
+                        <option selected>Huế</option>
+                        <option selected>Đà Nẵng</option>
+                        <option selected>Đà Lạt</option>
+                    </select>
+                </div>
+                <div class="lt-menu">
+                    <ul>
+                        <li><a href="Food.html">Đồ ăn</a></li>
+                   
+                        <li><a href="ThucPham.html">Thực phẩm</a></li>
+                        <li><a href="Bia.html">Đồ uống</a></li>
+                        <li><a href="HoaQua.html">Hoa quả</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="tk-dn">
+                    <div id="gio">
+                        <a href="Cart.html" id="card-shop">
+                            <img src="https://img.icons8.com/carbon-copy/40/000000/shopping-cart.png"/>
+                            <span id="item" data-count="0">1</span>
+                        </a>
+                    </div>
+                    <div class="dn">
+                        <a href="Login.html">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div class="than col-9">
+				<h3>Bún Phở</h3>
+				<div class="SP col-2" >
+					<a href="pho.html">
+						<img src="mon1.jpeg"/>
+						<h4 class="name-res" title="Phở Bà Hồng">Phở xào bò</h4>
+						<b style="color: red">30.000 ₫</b><br>
+						<div class="dc-res" title="173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội">173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội</div>
+						<span><img src="https://img.icons8.com/color/16/000000/sale--v1.png"/>Giảm hết 10%</span>
+					</a>
+				</div>
+				<div class="SP col-2" >
+					<a href="pho.html">
+						<img src="mon2.jpeg"/>
+						<h4 class="name-res" title="Phở Bà Hồng">Bún sườn</h4>
+						<b style="color: red">30.000 ₫</b><br>
+						<div class="dc-res" title="173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội">173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội</div>
+						<span><img src="https://img.icons8.com/color/16/000000/sale--v1.png"/>Giảm hết 10%</span>
+					</a>
+				</div>
+				<div class="SP col-2" >
+					<a href="pho.html">
+						<img src="mon3.jpeg"/>
+						<h4 class="name-res" title="Phở Bà Hồng">Bún bò Huế</h4>
+						<b style="color: red">30.000 ₫</b><br>
+						<div class="dc-res" title="173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội">173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội</div>
+						<span><img src="https://img.icons8.com/color/16/000000/sale--v1.png"/>Giảm hết 10%</span>
+					</a>
+				</div>
+				<div class="SP col-2" >
+					<a href="pho.html">
+						<img src="mon4.jpeg"/>
+						<h4 class="name-res" title="Phở Bà Hồng">Phở bò Nam định</h4>
+						<b style="color: red">30.000 ₫</b><br>
+						<div class="dc-res" title="173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội">173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội</div>
+						<span><img src="https://img.icons8.com/color/16/000000/sale--v1.png"/>Giảm hết 10%</span>
+					</a>
+				</div>
+				<div class="SP col-2" >
+					<a href="pho.html">
+						<img src="mon5.jpeg"/>
+						<h4 class="name-res" title="Phở Bà Hồng">Bún sườn dọc mùng</h4>
+						<b style="color: red">30.000 ₫</b><br>
+						<div class="dc-res" title="173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội">173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội</div>
+						<span><img src="https://img.icons8.com/color/16/000000/sale--v1.png"/>Giảm hết 10%</span>
+					</a>
+				</div>
+				<div class="SP col-2" >
+					<a href="pho.html">
+						<img src="mon6.jpeg"/>
+						<h4 class="name-res" title="Phở Bà Hồng">Bún mọc chân giò</h4>
+						<b style="color: red">30.000 ₫</b><br>
+						<div class="dc-res" title="173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội">173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội</div>
+						<span><img src="https://img.icons8.com/color/16/000000/sale--v1.png"/>Giảm hết 10%</span>
+					</a>
+				</div>
+				<div class="SP col-2" >
+					<a href="pho.html">
+						<img src="mon7.jpeg"/>
+						<h4 class="name-res" title="Phở Bà Hồng">Bún hải sản</h4>
+						<b style="color: red">30.000 ₫</b><br>
+						<div class="dc-res" title="173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội">173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội</div>
+						<span><img src="https://img.icons8.com/color/16/000000/sale--v1.png"/>Giảm hết 10%</span>
+					</a>
+				</div>
+				<div class="SP col-2" >
+					<a href="pho.html">
+						<img src="mon8.jpeg"/>
+						<h4 class="name-res" title="Phở Bà Hồng">Phở Bà Hồng</h4>
+						<b style="color: red">30.000 ₫</b><br>
+						<div class="dc-res" title="173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội">173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội</div>
+						<span><img src="https://img.icons8.com/color/16/000000/sale--v1.png"/>Giảm hết 10%</span>
+					</a>
+				</div>
+				<div class="SP col-2" >
+					<a href="pho.html">
+						<img src="mon9.jpeg"/>
+						<h4 class="name-res" title="Phở Bà Hồng">Phở gà</h4>
+						<b style="color: red">30.000 ₫</b><br>
+						<div class="dc-res" title="173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội">173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội</div>
+						<span><img src="https://img.icons8.com/color/16/000000/sale--v1.png"/>Giảm hết 10%</span>
+					</a>
+				</div>
+				<div class="SP col-2" >
+					<a href="pho.html">
+						<img src="mon1.jpeg"/>
+						<h4 class="name-res" title="Phở Bà Hồng">Phở xào bò </h4>
+						<b style="color: red">30.000 ₫</b><br>
+						<div class="dc-res" title="173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội">173 Nguyễn Bỉnh Kiêm, Trâu Quỳ, Gia Lâm, Hà Nội</div>
+						<span><img src="https://img.icons8.com/color/16/000000/sale--v1.png"/>Giảm hết 10%</span>
+					</a>
+				</div>
+            </div>
+        </div>
+        <div class="footer col-12">
+            <div class="ft">
+				<div class="footer1">
+					<h3>Tìm cửa hàng</h3>
+					<div>Tìm cửa hàng gần nhất</div>
+					<div>Mua hàng từ xa</div>
+					<h3>Phương thức thanh toán</h3>
+					<ul>
+						<li>
+							<img src="logo/logo-visa.png">
+							<img src="logo/logo-master.png">
+						</li>
+						<li>
+							<img src="logo/logo-jcb.png">
+							<img src="logo/logo-samsungpay.png">
+						</li>
+						<li>
+							<img src="logo/logo-atm.png">
+							<img src="logo/logo-vnpay.png">
+						</li>
+					</ul>
+				</div>
+				<div class="footer1">
+					<h3>Điện thoại</h3>
+					<div>Gọi mua hàng:0987654321(8h/22h)</div>
+					<div>Gọi bảo hành:0987654333(8h/22h)</div>
+					<div>Gọi khiếu nại:0987654222(8h/22h)</div>
+				</div>
+				<div class="footer1">
+					<div class="TT">
+						<div>Mua hàng và thanh toán online</div>
+						<div>Mua hàng trả góp online</div>
+						<div>Tra thông tin đơn hàng</div>
+						<div>Tra thông tin bảo hành</div>
+						<div>Dịch vụ bảo hành điện thoại</div>
+						<div>Đối tác phụ vụ bảo hành</div>
+					</div>
+				</div>
+				<div class="footer1">
+					<div class="TT">
+						<div>Quy chế hoạt động</div>
+						<div>Chính sách bảo hành</div>
+						<div>Liên hệ hợp tác kin doanh</div>
+						<div>Tuyển dụng</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </body>
+</html>

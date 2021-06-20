@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="admin.css">
+    <!-- <link rel="stylesheet" href="css/ad1.css"> -->
+    <script src="admin.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h2>ADMIN</h2>
+        <P><a class="fas fa-sign-out-alt" href="Food.html"></a> Đăng xuất</P>
+        <h1>HỆ THỐNG QUẢN TRỊ </h1>
+    </div>
+    <div class="content">
+        <div class="nav">
+            <ul class="subnav">
+                <li><a href="index.html">Trang Chủ</a>
+                </li>
+                <li id="Run">
+                    <div class="sla" id="subrun">
+                        <a href="#" >Danh Mục</a>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                    <ul class="subone">
+                        <li id="ad1"><a href="#">Nhập sản phẩm</a></li>
+                        <li id="ad2"><a href="#">Sửa sản phẩm</a></li>
+                        <li id="ad3"><a href="#">Xóa sản phẩm</a></li>
+                    </ul>
+                </li>
+                <!-- <li id="Run1">
+                    <div class="sla" id="subrun1">
+                        <a href="#">Nhập Hàng</a>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                    <ul class="subone" >
+                        <li id="ad4"><a href="#">Hoá đơn nhập</a></li>
+                        <li id="ad5"><a href="#">Hãng sản xuất</a></li>
+                        <li id="ad5"><a href="#">Nhà cung cấp</a></li>
+                    </ul>
+                </li> -->
+                <li id="Run2">
+                    <div class="sla" id="subrun2">
+                        <a href="#">Bán Hàng</a>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                    <ul class="subone">
+                        <li id="adi6"><a href="#">Hoá đơn Bán</a></li>
+                        <li id="adi7"><a href="#">Khách hàng</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- Phim -->
+        <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Nội dung form Cập Nhật -->
+        <div class="modal-content">
+            <form action="#">
+                <span class="close"><i class="far fa-times-circle"></i></span>
+                <h2>Form Cập Nhật</h2>
+            </form>
+            <div class="modal-main">
+                <table border="1" style="border-collapse:collapse;">
+                    <tr>
+                        <th>STT</th>
+                        <th>Ảnh</th>
+                        <th>Tên</th>
+                        <th>Đia chỉ</th>
+                        <th>Xóa</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="mon1.jpeg" alt=""></td>
+                        <td>Phở xào bò</td>
+                        <td>173 Nguyễn Bỉnh Khiêm, Trâu Quỳ, Gia Lâm, Hà Nội</td>
+                        <td><i class="fas fa-trash-alt"></i></td>
+                    </tr>
+                </table>
+                
+            </div>
+            <button class="btn"><i class="fas fa-plus-square"></i></button>
+        </div>
+    </div>
+    </div>
+    <div id="myModal1" class="modal">
+        <!-- Nội dung form Sửa -->
+        <div class="modal-content">
+            <form action="#">
+                <span class="close1"><i class="far fa-times-circle"></i></span>
+                <h2>Form Sửa</h2>
+                <div class="loc">
+                    <input type="text" name="firstname" id="myInput0" onkeyup="myFunction()" placeholder="Tìm Kiếm...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </form>
+            <div class="modal-main">
+                <table border="1" style="border-collapse:collapse;">
+                    <tbody id="myTable0">
+                        <tr>
+                            <th>STT</th>
+                            <th>Ảnh</th>
+                            <th>Tên</th>
+                            <th>Đia chỉ</th>
+                            <th>Sửa</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="mon1.jpeg" alt=""></td>
+                            <td>Phở xào bò</td>
+                            <td>173 Nguyễn Bỉnh Khiêm, Trâu Quỳ, Gia Lâm, Hà Nội</td>
+                            <td><i class="fas fa-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="mon2.jpeg" alt=""></td>
+                            <td>Bún sườn</td>
+                            <td>173 Nguyễn Bỉnh Khiêm, Trâu Quỳ, Gia Lâm, Hà Nội</td>
+                            <td><i class="fas fa-edit"></i></td>
+                        </tr>
+                </tbody>
+                </table>
+                <script>
+                    $(document).ready(function() {
+                    $('#myInput0').on('keyup', function(event) {
+                        event.preventDefault();
+                        /* Act on the event */
+                        var tukhoa0 = $(this).val().toLowerCase();
+                        $('#myTable0 tr').filter(function() {
+                            $(this).toggle($(this).text().toLowerCase().indexOf(tukhoa0)>-1);
+                        });
+                    });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <div id="myModal2" class="modal">
+        <!-- Nội dung form Xóa -->
+        <div class="modal-content">
+            <form action="#">
+                <span class="close2"><i class="far fa-times-circle"></i></span>
+                <h2>Form Xóa</h2>
+                <div class="loc">
+                    <input type="text" name="firstname">
+                    <i class="fas fa-search"></i>
+                </div>
+            </form>
+            <div class="modal-main">
+                <table border="1" style="border-collapse:collapse;">
+                    <tr>
+                        <div class="modal-main">
+                            <table border="1" style="border-collapse:collapse;">
+                                <tr>
+                                    <td class="deleteItem">
+                                        <img src="mon1.jpeg" alt="">
+                                        <button class="btn1"><i class="fas fa-minus-square"></i></button>
+                                    </td>
+                                    <td class="deleteItem">
+                                        <img src="mon2.jpeg" alt="">
+                                        <button class="btn1"><i class="fas fa-minus-square"></i></button>
+                                    </td>
+                                    <td class="deleteItem">
+                                        <img src="mon3.jpeg" alt="">
+                                        <button class="btn1"><i class="fas fa-minus-square"></i></button>
+                                    </td>
+                                    <td class="deleteItem">
+                                        <img src="mon4.jpeg" alt="">
+                                        <button class="btn1"><i class="fas fa-minus-square"></i></button>
+                                    </td>
+                                    <td class="deleteItem">
+                                        <img src="mon5.jpeg" alt="">
+                                        <button class="btn1"><i class="fas fa-minus-square"></i></button>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Nhà Cung Cấp -->
+    <div id="myModal3" class="modal">
+        <!-- Nội dung form danh sách -->
+        <div class="modal-content">
+            <form action="#">
+                <span class="close3"><i class="far fa-times-circle"></i></span>
+                <h2>Danh Sách</h2>
+                <div class="loc">
+                    <input type="text" name="firstname" id="myInput" onkeyup="myFunction3()" placeholder="Tìm Kiếm...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </form>
+            <div class="modal-main">
+                <table border="1" style="border-collapse:collapse;" class="myTable">
+                    <tbody id="myTable">
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã</th>
+                            <th>Tên</th>
+                        </tr>
+                        <tr>
+                            <td class="ListSX">1</td>
+                            <td class="ListSX">MT01</td>
+                            <td class="ListSX">MagoTV</td>
+                        </tr>
+                        <tr>
+                            <td class="ListSX">2</td>
+                            <td class="ListSX">MT02</td>
+                            <td class="ListSX">Xoài TV</td>
+                        </tr>
+                        <tr>
+                            <td class="ListSX">3</td>
+                            <td class="ListSX">MT03</td>
+                            <td class="ListSX">GoFit</td>
+                        </tr>
+                        <tr>
+                            <td class="ListSX">4</td>
+                            <td class="ListSX">MT04</td>
+                            <td class="ListSX">BiBiTV</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            <button class="btn"><i class="fas fa-plus-square"></i></button>
+            <script>
+                $(document).ready(function() {
+                $('#myInput').on('keyup', function(event) {
+                    event.preventDefault();
+                    var tukhoa = $(this).val().toLowerCase();
+                    $('#myTable tr').filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(tukhoa)>-1);
+                    });
+                });
+                });
+            </script>
+        </div>
+    </div>
+    
+    <div id="myModal4" class="modal">
+        <!-- Nội dung form Hợp Đồng -->
+        <div class="modal-content">
+            <form action="#">
+                <span class="close4"><i class="far fa-times-circle"></i></span>
+                <h2>Hợp Đồng</h2>
+                <div class="loc">
+                    <input type="text" name="firstname">
+                    <i class="fas fa-search"></i>
+                </div>
+            </form>
+            <div class="modal-main">
+                <table border="1" style="border-collapse:collapse;">
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên</th>
+                        <th>Bộ</th>
+                        <th>Giá</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr>
+                        <td class="ListSX">1</td>
+                        <td class="ListSX">MagoTV</td>
+                        <td class="ListSX">Tsubasa</td>
+                        <td class="ListSX">58.000.000 đ</td>
+                        <td class="ListSX"><a href="#" class="link-HD">https://drive.google.com/drive/my-drive</a></td>
+                    </tr>
+                    <tr>
+                        <td class="ListSX">2</td>
+                        <td class="ListSX">Xoài TV</td>
+                        <td class="ListSX">Panda 3</td>
+                        <td class="ListSX">87.000.000 đ</td>
+                        <td class="ListSX"><a href="#" class="link-HD">https://drive.google.com/drive/my-drive</a></td>
+                    </tr>
+                    <tr>
+                        <td class="ListSX">3</td>
+                        <td class="ListSX">GoFit</td>
+                        <td class="ListSX">Yoyo</td>
+                        <td class="ListSX">30.000.000 đ</td>
+                        <td class="ListSX"><a href="#" class="link-HD">https://drive.google.com/drive/my-drive</a></td>
+                    </tr>
+                    <tr>
+                        <td class="ListSX">4</td>
+                        <td class="ListSX">BiBiTV</td>
+                        <td class="ListSX">Tây Du Ký</td>
+                        <td class="ListSX">90.000.000 đ</td>
+                        <td class="ListSX"><a href="#" class="link-HD">https://drive.google.com/drive/my-drive</a></td>
+                    </tr>
+                </table>
+                
+            </div>
+            <button class="btn"><i class="fas fa-plus-square"></i></button>
+        </div>
+    </div>
+
+    <!-- Người dùng -->
+    
+    <div id="myModal5" class="modal">
+        <!-- Nội dung form Tài khoản vip -->
+        <div class="modal-content">
+            <form action="#">
+                <span class="close5"><i class="far fa-times-circle"></i></span>
+                <h2>Tài Khoản VIP</h2>
+                <div class="loc">
+                    <input type="text" name="firstname">
+                    <i class="fas fa-search"></i>
+                </div>
+            </form>
+            <div class="modal-main">
+                <table border="1" style="border-collapse:collapse;" class="myTable">
+                    <tbody>
+                        <tr>
+                            <th>Tài Khoản</th>
+                            <th>Mật Khẩu</th>
+                            <th>Vip</th>
+                            <th>Loại Bỏ</th>
+                        </tr>
+                        <tr>
+                            <td>caotrunghieu@gmail.com</td>
+                            <td>66773508</td>
+                            <td>15</td>
+                            <td><i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>hieu2k1@gmail.com</td>
+                            <td>989898</td>
+                            <td>16</td>
+                            <td><i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>caohieu@gmail.com</td>
+                            <td>343434</td>
+                            <td>13</td>
+                            <td><i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>hieucao@gmail.com</td>
+                            <td>121212</td>
+                            <td>12</td>
+                            <td><i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn"><i class="fas fa-plus-square"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="myModal6" class="modal">
+        <!-- Nội dung form tài khoản thường -->
+        <div class="modal-content">
+            <form action="#">
+                <span class="close6"><i class="far fa-times-circle"></i></span>
+                <h2>Tài Khoản thường</h2>
+                <div class="loc">
+                    <input type="text" name="firstname">
+                    <i class="fas fa-search"></i>
+                </div>
+            </form>
+            <div class="modal-main">
+                <table border="1" style="border-collapse:collapse;" class="myTable">
+                    <tbody id="myTable2">
+                        <tr>
+                            <th>Tài Khoản</th>
+                            <th>Mật Khẩu</th>
+                            <th>Loại Bỏ</th>
+                        </tr>
+                        <tr>
+                            <td>hongvan@gmail.com</td>
+                            <td>098769</td>
+                            <td><i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>duonghongvan@gmail.com</td>
+                            <td>456789</td>
+                            <td><i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>van2k1@gmail.com</td>
+                            <td>123456</td>
+                            <td><i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>van2k3@gmail.com</td>
+                            <td>654456</td>
+                            <td><i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            <button class="btn"><i class="fas fa-plus-square"></i></button>
+    </div>
+    </div>
+
+
+
+    <script >
+        // cập nhật
+            var modal = document.getElementById('myModal');
+            var li1= document.getElementById("ad1");
+            var span = document.getElementsByClassName("close")[0];
+            li1.onclick = function() {
+                modal.style.display = "block";
+                if(modal1!=null || modal2!=null || modal5!=null || modal6!=null){
+                    modal1.style.display = "none";
+                    modal2.style.display="none";
+                    modal5.style.display="none";
+                    modal6.style.display="none";
+                }
+            }
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        // Sửa
+            var modal1 = document.getElementById('myModal1');
+            var li2= document.getElementById("ad2");
+            var span = document.getElementsByClassName("close1")[0];
+            li2.onclick = function() {
+                if(modal1!=null || modal2!=null || modal5!=null || modal6!=null){
+                    modal.style.display="none";
+                    modal2.style.display="none";
+                    modal5.style.display="none";
+                    modal6.style.display="none";
+                }
+                modal.style.display = "none";
+                modal1.style.display = "block";
+            }
+            span.onclick = function() {
+            modal1.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal1) {
+                    modal1.style.display = "none";
+                }
+            }
+        // xóa
+            var modal2 = document.getElementById('myModal2');
+            var li3= document.getElementById("ad3");
+            var span = document.getElementsByClassName("close2")[0];
+            li3.onclick = function() {
+                if(modal1!=null || modal2!=null || modal5!=null || modal6!=null){
+                    modal2.style.display = "none";
+                    modal.style.display = "none";
+                    modal1.style.display = "none";
+                    modal5.style.display="none";
+                    modal6.style.display="none";
+                }
+                modal2.style.display = "block";
+            }
+            span.onclick = function() {
+            modal2.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal2) {
+                    modal2.style.display = "none";
+                }
+            }
+        // danh sách
+        // var modal3 = document.getElementById('myModal3');
+        //     var li4= document.getElementById("ad4");
+        //     var span = document.getElementsByClassName("close3")[0];
+        //     li4.onclick = function() {
+        //         modal3.style.display = "block";
+        //         if(modal1!=null || modal2!=null || modal!=null || modal4!=null || modal6!=null || modal5!=null){
+        //             modal.style.display="none";
+        //             modal1.style.display = "none";
+        //             modal2.style.display="none";
+        //             modal4.style.display="none";
+        //             modal5.style.display="none";
+        //             modal6.style.display="none";
+        //         }
+        //     }
+        //     span.onclick = function() {
+        //         modal3.style.display = "none";
+        //     }
+        //     window.onclick = function(event) {
+        //         if (event.target == modal) {
+        //             modal3.style.display = "none";
+        //         }
+        //     }
+        //     // hợp đồng
+        //     var modal4 = document.getElementById('myModal4');
+        //     var li5= document.getElementById("ad5");
+        //     var span = document.getElementsByClassName("close4")[0];
+        //     li5.onclick = function() {
+        //         modal4.style.display = "block";
+        //         if(modal1!=null || modal2!=null || modal!= null || modal3!=null || modal5!=null || modal6!=null){
+        //             modal.style.display="none";
+        //             modal1.style.display ="none";
+        //             modal2.style.display="none";
+        //             modal3.style.display="none";
+        //             modal5.style.display="none";
+        //             modal6.style.display="none";
+        //         }
+        //     }
+        //     span.onclick = function() {
+        //         modal4.style.display = "none";
+        //     }
+        //     window.onclick = function(event) {
+        //         if (event.target == modal) {
+        //             modal4.style.display = "none";
+        //         }
+        //     }
+            // TK VIP
+            var modal5 = document.getElementById('myModal5');
+            var li6= document.getElementById("adi6");
+            var span = document.getElementsByClassName("close5")[0];
+            li6.onclick = function() {
+                modal5.style.display = "block";
+                if(modal1!=null || modal2!=null || modal!= null ||modal6!=null){
+                    modal.style.display="none";
+                    modal1.style.display = "none";
+                    modal2.style.display="none";
+;
+                    modal6.style.display="none";
+                }
+            }
+            span.onclick = function() {
+                modal5.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal5.style.display = "none";
+                }
+            }
+
+            var modal6 = document.getElementById('myModal6');
+            var li7= document.getElementById("adi7");
+            var span = document.getElementsByClassName("close6")[0];
+            li7.onclick = function() {
+                console.log(li7);
+                modal6.style.display = "block";
+                if(modal1!=null || modal2!=null || modal!= null ||modal5!=null){
+                    modal.style.display="none";
+                    modal1.style.display = "none";
+                    modal2.style.display="none";
+                    
+                    modal5.style.display="none";
+                }
+            }
+            span.onclick = function() {
+                modal6.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal6.style.display = "none";
+                }
+            }
+    </script>
+</body>
+</html>

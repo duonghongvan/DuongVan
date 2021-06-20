@@ -1,0 +1,244 @@
+<html>
+    <head>
+        <title>Đặt đồ ăn trực tuyến</title>
+        <link rel="stylesheet" type="text/css" href="pho.css">
+		<!-- <link href="https://s3.prod.now.vn/resources/shopee_font/font.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+        <script src="https://kit.fontawesome.com/3875455e82.js" crossorigin="anonymous"></script> 
+		<script src="jquery-3.6.0.min.js"></script>
+        <script src="dathang.js"></script>
+  </head>
+    <body style="margin: 0px;font-family:Arial;">
+        <div id="nav">
+            <div id="menu">
+                <div class="logo">
+                    <a href="Food.html" style="float: left;"><img src="a1.png" ></a>
+                    <select class="list-tp">
+                        <option selected>Hà Nội</option>
+                        <option selected>Hưng Yên</option>
+                        <option selected>Hải Dương</option>
+                        <option selected>Hải Phòng</option>
+                        <option selected>TP.HCM</option>
+                        <option selected>Huế</option>
+                        <option selected>Đà Nẵng</option>
+                        <option selected>Đà Lạt</option>
+                    </select>
+                </div>
+                <div class="lt-menu">
+                    <ul>
+                        <li><a href="Food.html">Đồ ăn</a></li>
+                   
+                        <li><a href="ThucPham.html">Thực phẩm</a></li>
+                        <li><a href="Bia.html">Đồ uống</a></li>
+                        <li><a href="HoaQua.html">Hoa quả</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="tk-dn">
+                    <div id="gio">
+                        <a href="Cart.html" id="card-shop">
+                            <img src="https://img.icons8.com/carbon-copy/40/000000/shopping-cart.png"/>
+                            <span id="item" data-count="0">0</span>
+                        </a>
+                    </div>
+                    <div class="dn">
+                        <a href="Login.html">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div class="than col-9">
+                <div class="phan-dau">
+                    <img src="mon1.jpeg" class="mon-chinh">
+                    <div class="chi-tiet col-7">
+						<h2><p class="title">Phở xào bò</p></h2>
+                        <p class="price-item">
+                            Giá: 
+                            <strong class="item-price">30.000 ₫</strong>
+							<strike>35.000 ₫</strike>
+                        </p>
+                        <p class="dia-chi">
+                            <strong>173 Nguyễn Bỉnh Khiêm, Trâu Quỳ, Gia Lâm, Hà Nội</strong><br/>
+                            <span style="color: rgb(95, 179, 11);">Mở cửa</span> <span>00:01-23:59</span>
+                        </p>
+                        <p class="dg">
+                            <i class="fa fa-star checked" style="color:Orange"></i>
+                            <i class="fa fa-star checked" style="color:Orange"></i>
+                            <i class="fa fa-star checked" style="color:Orange"></i>
+                            <i class="fa fa-star checked" style="color:Orange"></i>
+                            <i class="fa fa-star checked" style="color:Orange"></i>
+                            <span>lượt đánh giá từ Now</span>
+                        </p><br/>
+						<p> Thành phần:</br> 
+						200gr thịt bò thái lát mỏng</br> 
+						70gr giá đỗ</br>
+						8 lát bánh phở dùng để cuốn</br>
+						2 cây hành lá, cây hẹ</br>
+						¼ củ hành tây</br>
+						2 thìa canh xì dầu,
+						1 thìa canh tương nhạt, 
+						1 thìa cà phê đường
+						</P>
+                        <div class="TT">
+                            <a href="DatMuaMon.html" title="Mua ngay">
+                                <div class="mua">
+                                    MUA NGAY<br/>
+                                    Trả tiền khi nhận hàng (COD)
+                                </div>
+                            </a>
+                            <a href="#" class="them_hang" role="button" onclick="dathang({id:'1',img:'mon1.jpeg',name:'Phở xào bò',price:'30000',price_s:'35000',dia_chi:'173 Nguyễn Bỉnh Khiêm, Trâu Quỳ, Gia Lâm, Hà Nội'})"  title="Thêm vào giỏ hàng">
+                                <img src="https://img.icons8.com/material-outlined/38/ffffff/buy.png"/>
+                            </a>
+                        </div>
+                        <div class="phi col-12">
+                            <hr/>
+                            <ul>
+                                <li>
+                                    <strong>PHÍ DỊCH VỤ</strong><br/>
+                                    <b>0.00% PHÍ DỊCH VỤ</b>
+                                </li>
+                                <li>
+                                    <strong>DỊCH VỤ BỞI</strong><br/>
+                                    <b>Now</b>
+                                </li>
+                                <li>
+                                    <strong>CHUẨN BỊ</strong><br/>
+                                    <span style="font-size: 13;">12 Phút</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="san-pham col-12">
+                <div class="phan-duoi1 col-3">
+                    <h4>THỰC ĐƠN</h4>
+                    <ul>
+                        <li><a href="#"><b>MÓN CHÍNH</b></a></li>
+                        <li><a href="#"><b>ĐỒ UỐNG</b></a></li>
+                    </ul>
+                </div>
+                <div class="phan-duoi2 col-5">
+                    <b>MÓN CHÍNH</b>
+                    <a href="bunsuon.html">
+                        <div class="them-mon" >
+                            <img  src="mon2.jpeg" class="sp">
+                            <div class="ten">
+                                <strong>Bún sườn</strong>
+                                <span>30.000 ₫</span>
+                            </div>
+                        </div>
+					</a><a  href="#">
+                        <div class="them-mon">
+                            <img src="mon3.jpeg" class="sp">
+                            <div class="ten">
+                                <strong>Bún bò huế</strong>
+                                <span>30.000 ₫</span>
+                            </div>
+                        </div>
+						</a><a  href="#">
+                        <div class="them-mon">
+                            <img src="mon4.jpeg" class="sp">
+                            <div class="ten">
+                                <strong>Phở bò Nam định </strong>
+                                <span>30.000 ₫</span>
+                            </div>
+                        </div>
+                    </a> <br/><br/>
+
+                    <b>ĐỒ UỐNG</b>
+                    <a href="#">
+                        <div class="them-mon">
+                            <img src="bia10.jpg" class="sp">
+                            <div class="ten">
+                                <strong>Trà thảo mộc</strong>
+                                <span>30.000 ₫</span>
+                            </div>
+                        </div>
+                        <div class="them-mon">
+                            <img src="bia2.jpg" class="sp">
+                            <div class="ten">
+                                <strong>Bia 333</strong>
+                                <span>30.000 ₫</span>
+                            </div>
+                        </div>
+                        <div class="them-mon">
+                            <img src="bia3.jpg" class="sp">
+                            <div class="ten">
+                                <strong>Bia Tiger</strong>
+                                <span>30.000 ₫</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="vouched col-2">
+                    <b>KHUYẾN MẠI</b>
+                    <div class="vouched1">
+                        <img src="10%.png" class="vc">
+                        Giảm 10% tất cả sản phẩm
+                    </div>
+                    <div class="vouched1">
+                        <img src="50%.png" class="vc">
+                        Giảm 50% tất cả sản phẩm
+                    </div><br/>
+                    <div class="vouched1">
+                        <img src="5%.png" class="vc">
+                        Giảm 5% tất cả sản phẩm
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer col-12">
+            <div class="ft">
+				<div class="footer1">
+					<h3>Tìm cửa hàng</h3>
+					<div>Tìm cửa hàng gần nhất</div>
+					<div>Mua hàng từ xa</div>
+					<h3>Phương thức thanh toán</h3>
+					<ul>
+						<li>
+							<img src="logo/logo-visa.png">
+							<img src="logo/logo-master.png">
+						</li>
+						<li>
+							<img src="logo/logo-jcb.png">
+							<img src="logo/logo-samsungpay.png">
+						</li>
+						<li>
+							<img src="logo/logo-atm.png">
+							<img src="logo/logo-vnpay.png">
+						</li>
+					</ul>
+				</div>
+				<div class="footer1">
+					<h3>Điện thoại</h3>
+					<div>Gọi mua hàng:0987654321(8h/22h)</div>
+					<div>Gọi bảo hành:0987654333(8h/22h)</div>
+					<div>Gọi khiếu nại:0987654222(8h/22h)</div>
+				</div>
+				<div class="footer1">
+					<div class="TT">
+						<div>Mua hàng và thanh toán online</div>
+						<div>Mua hàng trả góp online</div>
+						<div>Tra thông tin đơn hàng</div>
+						<div>Tra thông tin bảo hành</div>
+						<div>Dịch vụ bảo hành điện thoại</div>
+						<div>Đối tác phụ vụ bảo hành</div>
+					</div>
+				</div>
+				<div class="footer1">
+					<div class="TT">
+						<div>Quy chế hoạt động</div>
+						<div>Chính sách bảo hành</div>
+						<div>Liên hệ hợp tác kin doanh</div>
+						<div>Tuyển dụng</div>
+					</div>
+				</div>
+			</div>
+        </div>
+		
+    </body>
+</html>
